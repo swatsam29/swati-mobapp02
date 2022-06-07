@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:lesson1/viewscreen/buttondemo_screen.dart';
+import 'package:lesson1/viewscreen/fontdemo_screen.dart';
 import 'package:lesson1/viewscreen/imagedemo_screen.dart';
+import 'package:lesson1/viewscreen/rowcoldemo_screen.dart';
 import 'package:lesson1/viewscreen/view/view_util.dart';
 import 'materialdesign_screen.dart';
 
@@ -26,19 +29,14 @@ class StartScreen extends StatelessWidget {
                     message: 'Message button pressed',
                   ),
               icon: const Icon(Icons.message)),
-          PopupMenuButton(
-            onSelected: (String value) {
-              showSnackBar(context: context, message: 'Popupmenu = $value');
-            },
-            itemBuilder: (BuildContext context) {
+          PopupMenuButton(onSelected: (String value) {
+            showSnackBar(context: context, message: 'Popupmenu = $value');
+          }, itemBuilder: (BuildContext context) {
             return <PopupMenuItem<String>>[
               PopupMenuItem(
                 value: 'License',
                 child: Row(
-                  children: const [
-                    Icon(Icons.label),
-                    Text('License')
-                  ],
+                  children: const [Icon(Icons.label), Text('License')],
                 ),
               ),
               PopupMenuItem(
@@ -50,13 +48,10 @@ class StartScreen extends StatelessWidget {
                   ],
                 ),
               ),
-               PopupMenuItem(
+              PopupMenuItem(
                 value: 'Profile',
                 child: Row(
-                  children: const [
-                    Icon(Icons.person),
-                    Text('Profile')
-                  ],
+                  children: const [Icon(Icons.person), Text('Profile')],
                 ),
               ),
             ];
@@ -104,16 +99,31 @@ class StartScreen extends StatelessWidget {
                 Navigator.pushNamed(context, MaterialDesignClass.routeName),
             child: Text(
               'Material Design Style',
-              style: Theme.of(context).textTheme.button,
+              style: Theme.of(context).textTheme.headline6,
             ),
           ),
           ElevatedButton(
             onPressed: () =>
-            Navigator.pushNamed(context, ImageDemoScreen.routeName),
+                Navigator.pushNamed(context, ImageDemoScreen.routeName),
             child: Text(
-              'Button 2',
-              style: Theme.of(context).textTheme.button,
+              'Image Demo',
+              style: Theme.of(context).textTheme.headline6,
             ),
+          ),
+          ElevatedButton(
+            onPressed: () =>
+                Navigator.pushNamed(context, ButtonDemoScreen.routeName),
+            child: const Text('Button Demo'),
+          ),
+          ElevatedButton(
+            onPressed: () =>
+                Navigator.pushNamed(context, FontDemoScreen.routeName),
+            child: const Text('Font Demo'),
+          ),
+          ElevatedButton(
+            onPressed: () =>
+                Navigator.pushNamed(context, rowColDemoScreen.routeName),
+            child: const Text('Row/Col Demo'),
           ),
         ],
       ),
