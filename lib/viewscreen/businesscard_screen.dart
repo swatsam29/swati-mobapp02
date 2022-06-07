@@ -70,6 +70,29 @@ class BusinessCardScreen extends StatelessWidget {
                 'Computer Science',
                 style: Theme.of(context).textTheme.headline3,
               ),
+              const SizedBox(
+                height: 20.0,
+              ),
+              Row(
+                children: [
+                  const Icon(Icons.email),
+                  const SizedBox(width: 30.0,),
+              Text(
+                'ssampathkumar@uco.edu',
+                style: Theme.of(context).textTheme.headline6,
+              ),
+                ],
+              ),
+               Row(
+                children: [
+                  const Icon(Icons.phone),
+                  const SizedBox(width: 30.0,),
+              Text(
+                '+1 (214)606-0761',
+                style: Theme.of(context).textTheme.headline6,
+              ),
+                ],
+              ),
             ],
           ),
         ),

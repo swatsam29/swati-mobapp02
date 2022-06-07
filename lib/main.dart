@@ -20,6 +20,7 @@ class Lesson1App extends StatelessWidget {
       debugShowCheckedModeBanner: Constant.dev,
       theme: ThemeData(
           brightness: Brightness.dark,
+          fontFamily: 'LobsterTwo',
           textTheme: const TextTheme(
             headline1: TextStyle(
               fontSize: 64.0,
