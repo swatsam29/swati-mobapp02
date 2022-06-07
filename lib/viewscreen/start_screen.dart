@@ -88,7 +88,11 @@ class StartScreen extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
+      body: SizedBox(
+        width: MediaQuery.of(context).size.width,
+        child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             'Choose a menu to navigate',
@@ -126,6 +130,7 @@ class StartScreen extends StatelessWidget {
             child: const Text('Row/Col Demo'),
           ),
         ],
+      ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
