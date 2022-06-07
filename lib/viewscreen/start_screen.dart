@@ -76,8 +76,26 @@ class StartScreen extends StatelessWidget {
       },
       child: const Icon(Icons.add),
       ),
-
-
-    );
-  }
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 2,
+        onTap: (int index){
+          showSnackBar(context: context, message: 'Bottom Navigation Bar: index= $index');
+        },
+        items: const [
+          BottomNavigationBarItem(
+            label: 'home',
+            icon: Icon(Icons.home), 
+          ),
+          BottomNavigationBarItem(
+            label: 'Time',
+            icon: Icon(Icons.time_to_leave), 
+          ),
+          BottomNavigationBarItem(
+            label: 'Business',
+            icon: Icon(Icons.business), 
+          ),
+        ],
+          ),
+          );
+   }
 }
