@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lesson1/model/constants.dart';
+import 'package:lesson1/viewscreen/businesscard_screen.dart';
 import 'package:lesson1/viewscreen/buttondemo_screen.dart';
 import 'package:lesson1/viewscreen/fontdemo_screen.dart';
 import 'package:lesson1/viewscreen/imagedemo_screen.dart';
@@ -60,6 +61,7 @@ class Lesson1App extends StatelessWidget {
         ButtonDemoScreen.routeName: (context) => const ButtonDemoScreen(),
         FontDemoScreen.routeName:(context) => const FontDemoScreen(),
         rowColDemoScreen.routeName:(context) => const rowColDemoScreen(),
+        BusinessCardScreen.routeName: (context) => const BusinessCardScreen(),
       },
     );
   }
