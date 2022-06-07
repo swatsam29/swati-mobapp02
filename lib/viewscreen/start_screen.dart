@@ -70,6 +70,14 @@ class StartScreen extends StatelessWidget {
           ),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+        showSnackBar(context: context, message: 'Floating Action Button');
+      },
+      child: const Icon(Icons.add),
+      ),
+
+
     );
   }
 }
